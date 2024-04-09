@@ -1,0 +1,398 @@
+
+/* Hero Section */
+
+.intro-text {
+  display: flex;
+  justify-content: space-between;  
+
+  color: var(--clr-secondary);
+  font-weight: var(--fw-300);
+  font-size: var(--fs-extra-large);
+}
+
+.intro-text p {
+  letter-spacing: 3rem;
+}
+
+.text-container {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.text-container img {
+  width: 100%;
+}
+
+.text-container .btn {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  background-color: var(--clr-accent-100);
+  font-size: var(--fs-extra-large);
+
+  padding: 1.5rem;
+}
+
+.trend-houses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.trend-houses .house {
+  height: 300px;
+  background-color: gray;
+
+  border-radius: 20px;
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+.trend-houses .house:nth-child(2) {
+  height: 400px;
+}
+
+.trend-houses .house:hover img {
+  transform: scale(1.2);
+}
+
+.trend-houses .house img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+
+  transition: 300ms transform;
+}
+
+/* Listing Section */
+.listing-section {
+  color: var(--clr-secondary);
+}
+
+.listing-section h2 {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-500);
+  letter-spacing: 4px;
+
+  font-size: var(--fs-extra-large);
+
+}
+
+
+.list-houses {
+  
+  display: flex;
+  gap: 2rem;
+
+  overflow: hidden;
+}
+
+.list-houses > * {
+  flex-shrink: 0;
+}
+
+.house-info {
+  --_house-info-container-size: 390px;
+
+  height: var(--_house-info-container-size);
+  width: 400px;
+  border: 1px solid transparent;
+
+  
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  cursor: pointer;
+  overflow: hidden;
+  
+}
+
+
+.house-info:hover {
+  border: 1px solid var(--clr-accent-100);
+}
+
+
+
+.house-info__house-image-container {
+  background-color: brown;
+  height: calc(var(--_house-info-container-size) - calc(var(--_house-info-container-size) / 2.5));
+
+  z-index: 9999;
+}
+
+.house-info__house-image-container img {
+  object-fit: cover;
+  /* object-position: bottom; */
+  height: 100%;
+  width: 100%;
+  transition: height 0.3s ease; /* Add transition property */
+}
+
+.house-info:hover .house-info__house-image-container img {
+  height: var(--_house-info-container-size);
+  object-fit: cover;
+}
+
+.house-info__price {
+  font-weight: var(--fw-800);
+  font-size: var(--fs-medium);
+}
+
+.house-info__additional-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.house-info__address {
+  align-content: center;
+  flex: 1;
+}
+
+
+/* Assurance Section */
+.assurance-section {
+  height: 100vh;
+
+  display: flex;
+  overflow: hidden;
+
+  color: var(--clr-secondary);
+}
+
+.assurance-section > * {
+  flex-shrink: 0;
+  height: 100%
+}
+
+.assurance__left-info-container {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  gap: 1rem;
+}
+
+.assurance__left-info-container p:first-child {
+  font-size: var(--fs-medium);
+}
+
+.assurance__left-info-container p:nth-child(2) {
+  font-size: var(--fs-extra-large);
+}
+
+.assurance__left-info-container p:nth-child(3) {
+  font-size: var(--fs-small);
+  width: 85%;
+  text-align: justify;
+}
+
+.assurance__right-info-container {
+
+  width: 100%;
+
+  display: flex;
+
+}
+
+.assurance__right-info-container > * {
+  margin-right: 1rem;
+}
+
+.real-vitalize {
+  width: 110px;
+  height: 100%;
+
+  border-right: 2px solid var(--clr-secondary);
+  border-left: 2px solid var(--clr-secondary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.real-vitalize p {
+
+  font-family: var(--ff-primary);
+
+  transform: rotate(-90deg);
+  font-size: var(--fs-extra-large);
+  width: 100%
+}
+
+
+.agent-info {
+  width: 400px;
+  height: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.agent-info__image-container {
+  height: 300px;
+  background-color: green;
+  overflow: hidden;
+}
+
+.agent-info__image-container img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.agent-info__info-container {
+  flex: 1;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.agent-info__info-container p:nth-child(2) {
+  text-align: justify;
+}
+
+/* Our Project Section */
+
+.our-project__house-projects > * {
+  height: 350px;
+  background-color: black;
+  border-radius: 50%;
+
+
+
+  overflow: hidden;
+}
+
+.our-project__house-projects > * img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+
+  opacity: 0.9;
+}
+
+
+.our-project__info-container {
+  margin-top: 3rem;
+
+  display: grid;
+
+  grid-template-columns: 1fr 300px;
+  
+  color: var(--clr-secondary);
+}
+
+.info-container__left-info {
+  padding-right: 7rem;
+  text-align: justify;
+  color: var(--clr-neutral-200);
+} 
+
+
+.info-container__right-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-container__right-info p {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-900);
+}
+
+
+/* About Us Section */
+
+.about-us-section {
+  min-height: 100vh;
+  color: var(--clr-secondary);
+}
+
+.video-container {
+  width: 100%;
+  height: 400px;
+  background-color: red;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+
+  margin-bottom: 2rem;
+}
+
+.video-container button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--clr-accent-100);
+  font-size: var(--fs-extra-large);
+  width: 100px;
+  height: 100px;
+}
+
+.video-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-us__about-us-info-container {
+  display: flex;
+  align-items: center;
+
+  text-align: justify;
+}
+
+.about-us__about-us-info-container p:first-child {
+  width: 400px;
+}
+
+.about-us__about-us-info-container p:last-child {
+  flex: 1;
+  color: var(--clr-neutral-200);
+}
+
+.about-us__about-us-info-container p:first-child {
+  text-align: center;
+  font-size: var(--fs-large);
+  font-weight: var(--fw-800);
+}
+
+
+/* Scroller Section */
+.scroller-section {
+  margin-top: 3rem;
+  font-family: var(--ff-primary);
+}
+
+.scroller-section .scroller ul li {
+  color: var(--clr-neutral-200);
+}
+
+.scroller-section .scroller:nth-child(2) ul li::marker {
+  color: var(--clr-accent-100);
+}
+
+.scroller-section .scroller-border {
+  border-top: 1px solid var(--clr-neutral-200);
+}
+
+.scroller-section .scroller-border:last-child {
+  border-bottom: 1px solid var(--clr-neutral-200);
+}

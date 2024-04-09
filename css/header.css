@@ -1,0 +1,40 @@
+
+.header {
+  padding: 2rem 5rem;
+
+  font-family: var(--ff-primary);
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__navigation ul {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.header__navigation ul a {
+  color: var(--clr-secondary);
+  font-weight: var(--fw-300);
+  font-size: var(--fs-small);
+
+  position: relative;
+}
+
+.header__navigation ul a::before {
+  content: '';
+  background-color: var(--clr-secondary);
+  width: 0;
+  position: absolute;
+  height: 1px;
+  bottom: -3px;
+  left: 0;
+
+  transition: 0.3s all;
+}
+
+.header__navigation ul a:hover::before {
+  width: 100%;
+}
